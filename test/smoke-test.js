@@ -12,8 +12,13 @@ var request = require('supertest'),
 
 describe('module smoke test', function() {
 
+    var SUIT = null;
+
     before(function(done) {
         // Call before all tests
+        delete require.cache[require.resolve(modulePath)];
+        let options = {};
+        SUIT = require(modulePath);
         done();
     });
 
@@ -32,15 +37,55 @@ describe('module smoke test', function() {
         done();
     });
 
-    it('module should callback OK', function(done) {
-        delete require.cache[require.resolve(modulePath)];
-        let options = {};
-        require(modulePath)(options, function(err,data) {
-            should.not.exist(err);
-            should.exist(data);
-            should.exist(data.status)
-            data.status.should.eql("OK");
-            done();
-        });
+    it('HEART suit should exist', function(done) {
+        should.exist(SUIT);
+        should.exist(SUIT.HEART);
+        done();
+    });
+
+    it('HEART suit should have a unique value', function(done) {
+        SUIT.HEART.should.not.eql(SUIT.DIAMOND);
+        SUIT.HEART.should.not.eql(SUIT.SPADE);
+        SUIT.HEART.should.not.eql(SUIT.CLUB);
+        done();
+    });
+
+    it('DIAMOND suit should exist', function(done) {
+        should.exist(SUIT);
+        should.exist(SUIT.DIAMOND);
+        done();
+    });
+
+    it('DIAMOND suit should have a unique value', function(done) {
+        SUIT.DIAMOND.should.not.eql(SUIT.HEART);
+        SUIT.DIAMOND.should.not.eql(SUIT.SPADE);
+        SUIT.DIAMOND.should.not.eql(SUIT.CLUB);
+        done();
+    });
+
+    it('SPADE suit should exist', function(done) {
+        should.exist(SUIT);
+        should.exist(SUIT.SPADE);
+        done();
+    });
+
+    it('SPADE suit should have a unique value', function(done) {
+        SUIT.SPADE.should.not.eql(SUIT.HEART);
+        SUIT.SPADE.should.not.eql(SUIT.DIAMOND);
+        SUIT.SPADE.should.not.eql(SUIT.CLUB);
+        done();
+    });
+
+    it('CLUB suit should exist', function(done) {
+        should.exist(SUIT);
+        should.exist(SUIT.CLUB);
+        done();
+    });
+
+    it('CLUB suit should have a unique value', function(done) {
+        SUIT.CLUB.should.not.eql(SUIT.HEART);
+        SUIT.CLUB.should.not.eql(SUIT.DIAMOND);
+        SUIT.CLUB.should.not.eql(SUIT.SPADE);
+        done();
     });
 });

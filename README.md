@@ -1,7 +1,7 @@
 
 @mitchallen/playing-card-suit
 ==
-PUT DESCRIPTION HERE
+An enum-like object for representing the suits in a playing card deck.
 --
 * * *
 ## Installation
@@ -14,6 +14,22 @@ You must use __npm__ __2.7.0__ or higher because of the scoped package name.
 * * *
 
 ## Usage
+
+This module returns an object that has four frozen and unique properties that can be used to represent playing card suits:
+
+* __HEART__
+* __DIAMOND__
+* __SPADE__
+* __CLUB__
+
+You can use them to define the suit of each card in a deck.
+
+    var SUIT = require("@mitchallen/playing-card-suit")l
+    
+	card[0].suit = SUIT.HEART;
+	card[1].suit = SUIT.DIAMOND;
+	card[2].suit = SUIT.SPADE;
+	card[3].suit = SUIT.CLUB;
 
 ## Testing
 

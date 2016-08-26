@@ -7,7 +7,9 @@
 
 "use strict";
 
-module.exports = function (spec, callback) {
-    let data = { status: "OK" };
-    callback(null, data);
-};
+module.exports = Object.freeze({
+    HEART: 1,
+    DIAMOND: 2,
+    SPADE: 3,
+    CLUB: 4
+});
