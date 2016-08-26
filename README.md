@@ -55,6 +55,10 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Version History
 
+#### Version 0.1.2 
+
+* fixed type-o in readme instruction
+
 #### Version 0.1.1 
 
 * added description to package.json
