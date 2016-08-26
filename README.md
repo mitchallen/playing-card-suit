@@ -30,6 +30,13 @@ You can use them to define the suit of each card in a deck.
 	card[1].suit = SUIT.DIAMOND;
 	card[2].suit = SUIT.SPADE;
 	card[3].suit = SUIT.CLUB;
+	
+### .isSuit(value)
+
+You can test if a value is a valid suit by passing it to the __isSuit__ method:
+
+    if( SUIT.isSuit(card.suit) ) { ... }
+
 
 ## Testing
 
@@ -54,6 +61,10 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 * * *
 
 ## Version History
+
+#### Version 0.1.3 
+
+* added __isSuit__ method
 
 #### Version 0.1.2 
 

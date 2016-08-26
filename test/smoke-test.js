@@ -88,4 +88,32 @@ describe('module smoke test', function() {
         SUIT.CLUB.should.not.eql(SUIT.SPADE);
         done();
     });
+
+    it('HEART is suit', function(done) {
+        SUIT.isSuit(SUIT.HEART).should.eql(true);
+        done();
+    });
+
+    it('DIAMOND is suit', function(done) {
+        SUIT.isSuit(SUIT.DIAMOND).should.eql(true);
+        done();
+    });
+
+    it('SPADE is suit', function(done) {
+        SUIT.isSuit(SUIT.SPADE).should.eql(true);
+        done();
+    });
+
+    it('CLUB is suit', function(done) {
+        SUIT.isSuit(SUIT.CLUB).should.eql(true);
+        done();
+    });
+
+    it('invalid value is not suit', function(done) {
+        SUIT.isSuit(-1).should.eql(false);
+        SUIT.isSuit(0).should.eql(false);
+        SUIT.isSuit(5).should.eql(false);
+        SUIT.isSuit(null).should.eql(false);
+        done();
+    });
 });
