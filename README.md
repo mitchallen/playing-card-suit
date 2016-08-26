@@ -24,7 +24,7 @@ This module returns an object that has four frozen and unique properties that ca
 
 You can use them to define the suit of each card in a deck.
 
-    var SUIT = require("@mitchallen/playing-card-suit")l
+    var SUIT = require("@mitchallen/playing-card-suit");
     
 	card[0].suit = SUIT.HEART;
 	card[1].suit = SUIT.DIAMOND;
