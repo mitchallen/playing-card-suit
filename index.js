@@ -14,5 +14,11 @@ module.exports = Object.freeze({
     CLUB: 4,
     isSuit: function(value) {
         return (value >= 1 && value <= 4);
+    },
+    isRed: function(value) {
+        return (value == this.HEART || value == this.DIAMOND);
+    },
+    isBlack: function(value) {
+        return (value == this.SPADE || value == this.CLUB);
     }
 });

@@ -116,4 +116,61 @@ describe('module smoke test', function() {
         SUIT.isSuit(null).should.eql(false);
         done();
     });
+
+    it('HEART is red', function(done) {
+        SUIT.isRed(SUIT.HEART).should.eql(true);
+        done();
+    });
+
+    it('HEART is not black', function(done) {
+        SUIT.isBlack(SUIT.HEART).should.eql(false);
+        done();
+    });
+
+    it('DIAMOND is red', function(done) {
+        SUIT.isRed(SUIT.DIAMOND).should.eql(true);
+        done();
+    });
+
+    it('DIAMOND is not black', function(done) {
+        SUIT.isBlack(SUIT.DIAMOND).should.eql(false);
+        done();
+    });
+
+    it('SPADE is black', function(done) {
+        SUIT.isBlack(SUIT.SPADE).should.eql(true);
+        done();
+    });
+
+    it('SPADE is not red', function(done) {
+        SUIT.isRed(SUIT.SPADE).should.eql(false);
+        done();
+    });
+
+    it('CLUB is black', function(done) {
+        SUIT.isBlack(SUIT.CLUB).should.eql(true);
+        done();
+    });
+
+    it('CLUB is not red', function(done) {
+        SUIT.isRed(SUIT.CLUB).should.eql(false);
+        done();
+    });
+
+    it('invalid value is not red', function(done) {
+        SUIT.isRed(-1).should.eql(false);
+        SUIT.isRed(0).should.eql(false);
+        SUIT.isRed(5).should.eql(false);
+        SUIT.isRed(null).should.eql(false);
+        done();
+    });
+
+    it('invalid value is not black', function(done) {
+        SUIT.isBlack(-1).should.eql(false);
+        SUIT.isBlack(0).should.eql(false);
+        SUIT.isBlack(5).should.eql(false);
+        SUIT.isBlack(null).should.eql(false);
+        done();
+    });
+
 });

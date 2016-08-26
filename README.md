@@ -31,12 +31,32 @@ You can use them to define the suit of each card in a deck.
 	card[2].suit = SUIT.SPADE;
 	card[3].suit = SUIT.CLUB;
 	
+* * *
+	
 ### .isSuit(value)
 
 You can test if a value is a valid suit by passing it to the __isSuit__ method:
 
     if( SUIT.isSuit(card.suit) ) { ... }
 
+* * *
+
+### .isRed(value)
+
+You can test if a value is a red playing card (__HEART__ or __DIAMOND__) by passing it to the __isRed__ method:
+
+    if( SUIT.isRed(card.suit) ) { ... }
+    
+* * *
+
+### .isBlack(value)
+
+You can test if a value is a black playing card (__SPADE__ or __CLUB__) by passing it to the __isBlack__ method:
+
+    if( SUIT.isBlack(card.suit) ) { ... }
+
+
+* * *
 
 ## Testing
 
@@ -61,6 +81,11 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 * * *
 
 ## Version History
+
+#### Version 0.1.4
+
+* added __isRed__ method
+* added __isBlack__ method
 
 #### Version 0.1.3 
 
