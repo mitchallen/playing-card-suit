@@ -1,6 +1,6 @@
 {
   "name": "@mitchallen/playing-card-suit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "An enum-like object for representing the suits in a playing card deck.",
   "main": "index.js",
   "scripts": {
