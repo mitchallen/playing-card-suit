@@ -81,7 +81,7 @@ For looping you can retrieve the first (lowest) value for the suits in the list.
 	
 ###
 
-For looping you can retrieve the last (higheet) value for the suits in the list.
+For looping you can retrieve the last (highest) value for the suits in the list.
 
 	for( i = SUIT.first; i <= SUIT.last, i++ ) { ... }
 
