@@ -37,6 +37,37 @@ describe('module smoke test', function() {
         done();
     });
 
+    it('first equals 1', function(done) {
+        SUIT.first.should.eql(1);
+        done();
+    });
+
+    it('last equals 4', function(done) {
+        SUIT.last.should.eql(4);
+        done();
+    });
+
+
+    it('1 is first', function(done) {
+        SUIT.isFirst(1).should.eql(true);
+        done();
+    });
+
+    it('4 is not first', function(done) {
+        SUIT.isFirst(4).should.eql(false);
+        done();
+    });
+
+    it('1 is not last', function(done) {
+        SUIT.isLast(1).should.eql(false);
+        done();
+    });
+
+    it('4 is last', function(done) {
+        SUIT.isLast(4).should.eql(true);
+        done();
+    });
+
     it('HEART suit should exist', function(done) {
         should.exist(SUIT);
         should.exist(SUIT.HEART);

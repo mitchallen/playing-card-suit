@@ -12,6 +12,14 @@ module.exports = Object.freeze({
     DIAMOND: 2,
     SPADE: 3,
     CLUB: 4,
+    first: 1,
+    last: 4,
+    isFirst: function(value) {
+        return (value == this.first);
+    },
+    isLast: function(value) {
+        return (value == this.last);
+    },
     isSuit: function(value) {
         return (value >= 1 && value <= 4);
     },

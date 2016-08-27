@@ -55,6 +55,36 @@ You can test if a value is a black playing card (__SPADE__ or __CLUB__) by passi
 
     if( SUIT.isBlack(card.suit) ) { ... }
 
+* * *
+
+### .isFirst(value)
+
+For looping you can test to see if a suit is the first in the list:
+
+    while( ! SUIT.isFirst(card.suit) ) { ... }
+
+* * *
+
+### .isLast(value)
+
+For looping you can test to see if a suit is the last in the list:
+
+    while( ! SUIT.isLast(card.suit) ) { ... }
+
+* * *
+
+### .first
+
+For looping you can retrieve the first (lowest) value for the suits in the list.
+
+	for( i = SUIT.first; ... ) { ... }
+	
+###
+
+For looping you can retrieve the last (higheet) value for the suits in the list.
+
+	for( i = SUIT.first; i <= SUIT.last, i++ ) { ... }
+
 
 * * *
 
@@ -81,6 +111,11 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 * * *
 
 ## Version History
+
+#### Version 0.1.5
+
+* added first and last parameters
+* added isFirst and isLast methods
 
 #### Version 0.1.4
 
