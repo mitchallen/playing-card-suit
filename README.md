@@ -77,7 +77,7 @@ For looping you can test to see if a suit is the last in the list:
 
 For looping you can retrieve the first (lowest) value for the suits in the list.
 
-	for( i = SUIT.first; ... ) { ... }
+	for( var i = SUIT.first; ... ) { ... }
 	
 ###
 
